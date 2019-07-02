@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="This is a survey form I coded, as part of the FreeCodeCamp responsive webdesign certification">
+    <link rel="stylesheet" href="survey_style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <div id="form-outer">
+        <p id="description">Let us know how we can improve Udacity</p>
+        <form id="survey-form" action="#">
+            <!-- text-input for name -->
+            <div class="row-divs">
+                <div class="labels">
+                    <label for="name" id="name-label">Name</label>
+                </div>
+                <div class="input-divs">
+                    <input type="text" id="name" name="user_name" placeholder="Enter your name"  class="input-field" required >
+                </div>
+            </div>
+            <!-- text-input for email -->
+            <div class="row-divs">
+                <div class="labels">
+                    <label for="email" id="email-label">Email</label>
+                </div>
+                <div class="input-divs">
+                    <input class="input-field" type="email" name="email" placeholder="name@provider.com" id="email" required>
+                </div>
+            </div>
+            <!-- text-input for age -->
+            <div class ="row-divs">
+                <div class="labels">
+                    <label for="age" id="number-label">Age</label>
+                </div>
+                <div class="input-divs">
+                    <input class="input-field" type="number" name="age" id="number" placeholder="Age"  min="1" max="99" required> 
+                </div>
+            </div>
+            <!-- Dropdown menu for describing current role -->
+            <div class="row-divs">
+                    <div class="labels">
+                        <label for="role" id="dropdown">What's your current role?</label>
+                    </div>
+                    <div class="input-divs">
+                        <select name="role" id="dropdown" class="input-field dropdown">
+                            <option value="student">Student</option>
+                            <option value="working full time">Working full Time</option>
+                            <option value="other">Other</option>
+                        </select>
+                </div>
+            </div>
+            <!-- Radio Buttons for Recommendation: very/likely/not-->
+            <div class="row-divs">
+                <div class="labels">
+                    <label for="userRatings">How likely are you to tell your recommend Udacity to your friends?</label>
+                </div>
+                <div class="input-divs">
+                    <ul>
+                        <li class="radio">
+                            <input type="radio" name="rating" id="rating_choice1" value="very likely">
+                            <label for="recommend_choice1">Very likely</label>
+                        </li>
+                        <li class="radio">  
+                            <input type="radio" name="rating" id="rating_choice1" value="very likely">
+                            <label for="recommend_choice1">Likely</label>                  
+                        </li>
+                        <li class="radio">
+                            <input type="radio" name="rating" id="rating_choice3" value="not likely">
+                            <label for="recommend_choice3">Not likely</label>
+                        </li>           <!-- name is the same and label for refers to different id's (vgl. checkboxes)-->
+                    </ul>
+                </div>
+            </div>
+            <!-- Checkboxes for Nanodegree-type-->
+            <div class="row-divs">
+                <div class="labels">
+                        <label for="nd-type">Which Nanodegree(s) have you taken </br>(or are taking at the moment) ?</label>
+                </div>
+                <div class="input-divs">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="nd-type1" value="digital marketing">
+                            <label for="nd-type1">Digital Marketing</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="nd-type2" value="full stack development">
+                             <label for="nd-type2">Full Stack Development</label>
+                         </li>
+                        <li>
+                             <input type="checkbox" name="nd-type3" value="data science">
+                             <label for="nd-type3">Data Science</label>
+                        </li> <!-- different names and label references them (like it should be?!)-->
+                    </ul>       <!-- problem: the "surrounding label" (=text on the left); what should that reference?!-->
+                </div>
+            </div>
+            <!-- text-box for suggestions-->
+            <div class="row-divs">
+                <div class="labels">
+                    <label for="suggestion">Any suggestions or anything you'd like to share?</label>
+                </div>
+                <div class="input-divs">
+                    <textarea name="suggestions" id="suggestion-area" class="input-field" cols="30" rows="10" placeholder="Enter your comment here :)"></textarea>
+                </div>
+            </div>
+            <!-- submit-->
+            <div class="row-divs">
+                <input type="submit" value="Submit" id="submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
